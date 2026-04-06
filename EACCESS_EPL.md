@@ -10,6 +10,10 @@
 ## Sample IOS XR configuration
 
 ```text
+! Main physical interface — Layer 2 transport mode (configure before xconnect attachment)
+interface GigabitEthernet0/0/0/20
+ l2transport
+!
 l2vpn
  xconnect group ACC1
   p2p ACC-EPL

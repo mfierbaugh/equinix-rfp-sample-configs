@@ -5,16 +5,32 @@
 
 ## Overview
 
-**Monitoring** includes **TCAM** / **ACL** resource visibility, **telemetry** exports, and **OAM** where applicable. Use **show platform** / **show controllers** and **MDT** for utilization.
+**Monitoring** covers **TCAM** / **ACL** usage, **platform** and dataplane **resource** visibility, **OAM**, and streaming exports. On **Cisco 8000**, **Model-Driven Telemetry** dial-out can use a **dataplane-monitor** **sensor-group** with **OFA** statistics, **FIB** summaries, and the **Cisco-IOS-XR-8000-platforms-npu-resources-oper** **hw-resources-data** path for **NPU hardware** telemetry—paired with **destination-group** (VRF, gRPC, encoding), **subscription** (**strict-timer**, **sample-interval**, **source-interface**), and CLI (**show platform** / **show controllers**) as needed for your release.
 
 ## Sample IOS XR configuration
 
 ```text
+! Cisco 8000 Model-Driven Telemetry (dataplane monitor + 8000 NPU hw-resources sensor path)
 telemetry model-driven
- destination-group DG-MON
-  address-family ipv4 198.51.100.99 port 57400
+ destination-group DGroup1
+  vrf Mgmt-intf
+  address-family ipv4 198.18.201.23 port 57400
+   encoding self-describing-gpb
+   protocol grpc no-tls
+  !
+ !
+ sensor-group dataplane-monitor
+  sensor-path Cisco-IOS-XR-platforms-ofa-oper:ofa/stats/nodes/node
+  sensor-path Cisco-IOS-XR-fib-common-oper:fib/nodes/node/protocols/protocol/fib-summaries/fib-summary
+  sensor-path Cisco-IOS-XR-platforms-ofa-oper:ofa/stats/nodes/node/Cisco-IOS-XR-8000-platforms-npu-resources-oper:hw-resources-datas/hw-resources-data
+ !
+ subscription dataplane-monitor
+  sensor-group-id dataplane-monitor strict-timer
+  sensor-group-id dataplane-monitor sample-interval 60000
+  destination-id DGroup1
+  source-interface MgmtEth0/RP0/CPU0/0
+ !
 !
-! Platform resource commands are release-specific
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

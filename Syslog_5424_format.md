@@ -5,13 +5,21 @@
 
 ## Overview
 
-**RFC 5424** syslog structured data can be sent to remote servers using **logging** with **structured-data** where supported.
+**RFC 5424** syslog uses **`logging format rfc5424`** on IOS XR together with **trap** level, **facility**, remote **logging** hosts (**VRF**, **port**), **source-interface**, and optional **hostnameprefix**. Pair with **ssh server logging** when SSH session logging is required.
 
 ## Sample IOS XR configuration
 
 ```text
-logging 198.51.100.250 vrf MGMT severity info
-logging structured-data
+logging trap informational
+logging format rfc5424
+logging console debugging
+logging monitor debugging
+logging facility local7
+logging 198.18.201.22 vrf Mgmt-intf port 7514
+logging 198.18.201.23 vrf Mgmt-intf port 6514
+logging source-interface MgmtEth0/RP0/CPU0/0
+logging hostnameprefix 8711-AGG-32
+ssh server logging
 !
 ```
 

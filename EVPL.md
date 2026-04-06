@@ -5,11 +5,15 @@
 
 ## Overview
 
-**EVPL** is a point-to-point Ethernet Virtual Private Line (E-Line) typically implemented with **EVPN VPWS** (Ethernet VLAN or VLAN-aware) or **MPLS xconnect** on Cisco 8000. Supports VLAN manipulation, multiple TPID values, control-word, and FAT for load balancing.
+**EVPL** is a point-to-point Ethernet Virtual Private Line (E-Line) typically implemented with **EVPN VPWS** (Ethernet VLAN or VLAN-aware) or **MPLS xconnect** on Cisco 8000. Supports VLAN manipulation, multiple TPID values, control-word, and FAT for load balancing. Only the **subinterface** is configured in **l2transport** mode (not the parent physical port).
 
 ## Sample IOS XR configuration
 
 ```text
+! EVPL: only the subinterface is in l2transport mode (no parent interface l2transport)
+interface GigabitEthernet0/0/0/1.100 l2transport
+ encapsulation dot1q 100
+!
 l2vpn
  xconnect group XG1
   p2p P2P1
