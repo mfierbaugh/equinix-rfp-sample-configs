@@ -51,4 +51,22 @@ interface TenGigE0/0/0/0
  !
 ```
 
+### Flow Aware Transport (FAT) pseudowire
+
+```text
+! FAT: pw-class with flow-label for load-balancing across equal-cost paths
+l2vpn
+ pw-class FAT_CLASS
+  load-balancing
+   flow-label both    ! Options: both, transmit, or receive
+  !
+ !
+ xconnect group NSO-VPWS-Customer1
+  p2p NSO-VPWS-Customer1
+   interface TenGigE0/0/0/0
+   neighbor evpn evi 1234 target 1 source 2
+    pw-class FAT_CLASS
+   !
+```
+
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.
