@@ -14,17 +14,36 @@
 ## Sample IOS XR configuration
 
 ```text
-! BGP-LU: global labeled-unicast AF + iBGP and eBGP LU neighbors
+! BGP-LU: prerequisite route-policies
+route-policy LU-IMPORT
+  pass
+end-policy
+!
+route-policy LU-EXPORT
+  pass
+end-policy
+!
+route-policy LU-EBGP-IN
+  pass
+end-policy
+!
+route-policy LU-EBGP-OUT
+  pass
+end-policy
+!
+! BGP-LU: global ipv4 unicast AF with allocate-label + iBGP and eBGP neighbors
+! Note: 'address-family ipv4 labeled-unicast' is not supported on all Cisco 8000
+! releases; use 'address-family ipv4 unicast' with 'allocate-label all' instead.
 router bgp 65001
  bgp router-id 192.0.2.1
- address-family ipv4 labeled-unicast
+ address-family ipv4 unicast
   allocate-label all
  !
  ! iBGP LU (e.g. toward RR or core peer on loopbacks)
  neighbor 198.51.100.2
   remote-as 65001
   update-source Loopback0
-  address-family ipv4 labeled-unicast
+  address-family ipv4 unicast
    route-policy LU-IMPORT in
    route-policy LU-EXPORT out
   !
@@ -32,7 +51,7 @@ router bgp 65001
  ! eBGP LU toward another AS (transport / label peering)
  neighbor 203.0.113.10
   remote-as 65002
-  address-family ipv4 labeled-unicast
+  address-family ipv4 unicast
    route-policy LU-EBGP-IN in
    route-policy LU-EBGP-OUT out
    maximum-prefix 500000 80 restart 5

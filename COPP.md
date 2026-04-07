@@ -16,7 +16,8 @@
 ```text
 lpts pifib hardware police
  flow bgp known rate 10000
- flow icmp-default known rate 1000
+ flow bgp default rate 2000
+ flow icmp default rate 1000
 !
 ```
 

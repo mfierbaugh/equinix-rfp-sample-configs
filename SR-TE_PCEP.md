@@ -22,7 +22,6 @@ segment-routing
   pcc
    source-address ipv4 192.168.0.1
    pce address ipv4 192.168.0.50
-    password encrypted <secret>
   !
   policy MY_PCEP_POLICY
    color 100 end-point ipv4 192.168.0.9

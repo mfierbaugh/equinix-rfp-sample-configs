@@ -14,7 +14,9 @@
 ## Sample IOS XR configuration
 
 ```text
-cef load-sharing fields L4
+! Cisco 8000 performs 5-tuple hashing by default (src/dst IP, protocol, src/dst port).
+! The 'cef load-sharing fields L4' command does not exist on this platform.
+! ECMP hashing is hardware-driven; tune via bundle hash or entropy labels.
 router bgp 65001
  address-family ipv4 unicast
   additional-paths receive

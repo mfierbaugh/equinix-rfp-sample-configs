@@ -64,7 +64,14 @@ segment-routing
   !
   on-demand color 128
    dynamic
-    sid-algorithm 128
+    metric
+     type igp
+    !
+    constraints
+     segments
+      sid-algorithm 128
+     !
+    !
    !
   !
 !

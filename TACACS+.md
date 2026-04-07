@@ -14,13 +14,19 @@
 ## Sample IOS XR configuration
 
 ```text
+tacacs-server host 198.51.100.100
+ key TACACS_KEY
+!
+tacacs-server host 198.51.100.101
+ key TACACS_KEY
+!
 aaa group server tacacs+ TAC-GROUP1
  server 198.51.100.100
  server 198.51.100.101
 !
 aaa authentication login default group TAC-GROUP1 local
 aaa authorization exec default group TAC-GROUP1 local
-aaa accounting exec default group TAC-GROUP1
+aaa accounting exec default start-stop group TAC-GROUP1
 !
 ```
 

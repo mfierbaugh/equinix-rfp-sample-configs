@@ -28,6 +28,8 @@ end-policy
 !
 router bgp 65001
  bgp router-id 192.0.2.1
+ address-family ipv4 unicast
+ !
  neighbor 198.51.100.2
   remote-as 65500
   address-family ipv4 unicast

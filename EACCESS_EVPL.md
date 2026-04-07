@@ -14,6 +14,11 @@
 ## Sample IOS XR configuration
 
 ```text
+! E-Access EVPL: prerequisite route-policy
+route-policy PASS
+  pass
+end-policy
+!
 ! E-Access EVPL: l2transport subif + EVI/bridge-domain + BGP EVPN control plane
 evpn
  evi 4100
@@ -26,7 +31,6 @@ interface GigabitEthernet0/0/0/21.100 l2transport
 l2vpn
  bridge group ACC-EVPL
   bridge-domain BD-ACC
-   vpn-id 4100
    interface GigabitEthernet0/0/0/21.100
    evi 4100
 !

@@ -14,6 +14,11 @@
 ## Sample IOS XR configuration
 
 ```text
+! EIA (USE): prerequisite objects
+prefix-set PREFIX-ANY
+  0.0.0.0/0 le 32
+end-set
+!
 route-policy ANYCAST-IN
   if destination in PREFIX-ANY then
    set local-preference 200
@@ -22,7 +27,10 @@ route-policy ANYCAST-IN
 end-policy
 !
 router bgp 65001
+ address-family ipv4 unicast
+ !
  neighbor 203.0.113.20
+  remote-as 65001
   address-family ipv4 unicast
    route-policy ANYCAST-IN in
 !

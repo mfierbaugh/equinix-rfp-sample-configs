@@ -14,8 +14,10 @@
 ## Sample IOS XR configuration
 
 ```text
+! Cisco 8000 requires uRPF configured for both IPv4 and IPv6 on the same interface
 interface GigabitEthernet0/0/0/0
  ipv4 verify unicast source reachable-via any
+ ipv6 verify unicast source reachable-via any
 !
 ```
 

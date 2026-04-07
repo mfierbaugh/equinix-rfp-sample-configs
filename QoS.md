@@ -14,14 +14,40 @@
 ## Sample IOS XR configuration
 
 ```text
-! Cisco 8000 QoS: ingress + egress queueing + egress mark (example class names; add class-maps)
-interface HundredGigE0/0/0/0
- service-policy input INGRESS
+! Cisco 8000 QoS: class-maps (must be defined before policy-maps)
+class-map match-any GOLD-prec
+ match precedence 5
+ end-class-map
 !
-interface HundredGigE0/0/0/1
- service-policy output EGRESS-Q
- service-policy output EGRESS-mark
+class-map match-any SILVER-prec
+ match precedence 3
+ end-class-map
 !
+class-map match-any BRONZE-prec
+ match precedence 2
+ end-class-map
+!
+class-map match-any TC7
+ match traffic-class 7
+ end-class-map
+!
+class-map match-any GOLD-TC
+ match traffic-class 6
+ end-class-map
+!
+class-map match-any SILVER-TC
+ match traffic-class 5
+ end-class-map
+!
+class-map match-any BRONZE-TC
+ match traffic-class 4
+ end-class-map
+!
+class-map match-any GOLD-QG
+ match qos-group 5
+ end-class-map
+!
+! Cisco 8000 QoS: policy-maps (define before attaching with service-policy)
 policy-map INGRESS
  class GOLD-prec
   set traffic-class 6
@@ -74,6 +100,16 @@ policy-map EGRESS-mark
  !
  end-policy-map
 !
+! Attach service-policies to interfaces (one output policy per interface)
+interface HundredGigE0/0/0/0
+ service-policy input INGRESS
+!
+interface HundredGigE0/0/0/1
+ service-policy output EGRESS-Q
+!
+! Note: Cisco 8000 supports one output service-policy per interface.
+! To apply both queuing and marking, combine them into a single
+! hierarchical policy-map or use separate interfaces.
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

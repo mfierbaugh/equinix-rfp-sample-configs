@@ -14,19 +14,25 @@
 ## Sample IOS XR configuration
 
 ```text
-ptp
- profile G.8275.1
-  domain 24
- !
- clock
-  source frequency-sync
- !
+! PTP is not supported on Cisco 8711-32FH-M (P100) platform.
+! The configuration below is syntactically valid IOS XR but will fail
+! semantic validation on platforms without PTP hardware support.
+! On supported Cisco 8000 models (e.g. with SyncE/PTP line cards):
 !
-interface GigabitEthernet0/0/0/0
- ptp
-  transport ipv4
-  unicast master 198.51.100.200
- !
+! ptp
+!  clock
+!   domain 24
+!   profile g.8275.1 clock-type T-BC
+!  !
+! !
+! interface HundredGigE0/0/0/0
+!  ptp
+!   profile slave
+!   transport ipv4
+!   port state slave-only
+!  !
+!
+! Verify PTP hardware support with: show ptp platform servo
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

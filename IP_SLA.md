@@ -16,11 +16,16 @@
 ```text
 ipsla
  operation 1
-  type icmp echo 198.51.100.77 source-interface Loopback0
-  frequency 10
+  type icmp echo
+   destination address 198.51.100.77
+   source address 192.0.2.1
+   frequency 10
+  !
  !
-!
-ipsla schedule operation 1 life forever start-time now
+ schedule operation 1
+  life forever
+  start-time now
+ !
 !
 ```
 

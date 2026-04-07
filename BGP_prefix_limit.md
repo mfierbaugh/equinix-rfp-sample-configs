@@ -15,7 +15,10 @@
 
 ```text
 router bgp 65001
+ address-family ipv4 unicast
+ !
  neighbor 198.51.100.5
+  remote-as 65001
   address-family ipv4 unicast
    maximum-prefix 50000 80 restart 5
   !

@@ -15,11 +15,11 @@
 
 ```text
 dhcp ipv4
- profile METAL profile-helper relay
-  helper-address vrf TENANT 198.51.100.10 gi0/0/0/10
+ profile METAL relay
+  helper-address vrf TENANT 198.51.100.10
  !
+ interface GigabitEthernet0/0/0/10 relay profile METAL
 !
-! Exact dhcp ipv4 syntax varies — align with IOS XR DHCP relay doc for your release
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

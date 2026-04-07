@@ -14,10 +14,14 @@
 ## Sample IOS XR configuration
 
 ```text
+! EPLAN: bridge-domain with EVPN EVI
+! Note: vpn-id under bridge-domain is not supported on Cisco 8000
+interface GigabitEthernet0/0/0/10.600 l2transport
+ encapsulation dot1q 600
+!
 l2vpn
  bridge group BG-EPLAN
   bridge-domain BD-600
-   vpn-id 600
    interface GigabitEthernet0/0/0/10.600
    evi 600
 !

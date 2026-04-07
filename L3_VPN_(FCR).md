@@ -15,25 +15,36 @@
 
 ```text
 ! QPPB: BGP table-policy sets qos-group / precedence on learned prefixes; enable propagation on CE interface
+route-policy PASS
+  pass
+end-policy
+!
 route-policy QPPB-PREC
   set qos-group 5
 end-policy
 !
 vrf CUSTOMER-A
  address-family ipv4 unicast
-  maximum prefix 100000
-  bgp policy propagation
+  import route-target
+   65001:100
+  !
+  export route-target
+   65001:100
+  !
  !
  address-family ipv6 unicast
  !
 !
 router bgp 65001
+ address-family vpnv4 unicast
+ !
+ address-family ipv4 unicast
+ !
  vrf CUSTOMER-A
   rd 65001:100
   address-family ipv4 unicast
    label mode per-vrf
    maximum-paths eibgp 4
-   maximum-paths ibgp 4
    table-policy QPPB-PREC
   !
   neighbor 10.1.1.2

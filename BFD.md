@@ -17,6 +17,7 @@
 ! BGP neighbor BFD
 router bgp 65001
  neighbor 198.51.100.2
+  remote-as 65001
   bfd fast-detect
   bfd minimum-interval 50
   bfd multiplier 3
@@ -33,15 +34,17 @@ router isis CORE
  interface Bundle-Ether2
   bfd fast-detect ipv6
  !
-!
-! Interface-level BFD timers on Bundle-Ether (L3); pairs with IS-IS/BGP/OSPF as applicable
+root
+! Interface-level BFD timers on Bundle-Ether (L3)
+! These are configured at the global interface level (outside router isis)
 interface Bundle-Ether10
+ bfd mode ietf
  bfd address-family ipv4 fast-detect
  bfd address-family ipv4 minimum-interval 50
  bfd address-family ipv4 multiplier 3
 !
-! Example: second bundle (single-stack IPv6)
 interface Bundle-Ether11
+ bfd mode ietf
  bfd address-family ipv6 fast-detect
  bfd address-family ipv6 minimum-interval 50
  bfd address-family ipv6 multiplier 3

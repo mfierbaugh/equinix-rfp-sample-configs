@@ -16,19 +16,18 @@
 ## Sample IOS XR configuration
 
 ```text
-! Cisco 8000 SR guide: explicit named path + SR-TE policy (explicit segment-list)
-explicit-path name PATH-STRICT
- index 10 next-label 16010
- index 20 next-label 16020
-!
+! Cisco 8000 SR guide: segment-list + SR-TE policy (explicit segment-list)
 segment-routing
  traffic-eng
+  segment-list SL-STRICT
+   index 10 mpls label 16010
+   index 20 mpls label 16020
+  !
   policy POLICY-STRICT
    color 200 end-point ipv4 192.168.0.2
    candidate-paths
     preference 100
-     explicit segment-list
-      segment path-explicit PATH-STRICT
+     explicit segment-list SL-STRICT
 !
 ```
 

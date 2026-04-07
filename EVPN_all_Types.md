@@ -14,6 +14,11 @@ This covers **BGP EVPN** services on Cisco IOS XR for Ethernet VPN Instance (EVI
 ## Sample IOS XR configuration
 
 ```text
+! EVPN: prerequisite route-policy
+route-policy PASS
+  pass
+end-policy
+!
 ! BGP EVPN AF + L2VPN EVPN bridge-domain (illustrative)
 router bgp 65001
  bgp router-id 192.0.2.1
@@ -29,12 +34,13 @@ router bgp 65001
   !
  !
 !
-
+interface GigabitEthernet0/0/0/5.100 l2transport
+ encapsulation dot1q 100
+!
 l2vpn
  bridge group BG1
   bridge-domain BD100
-   vpn-id 100
-   interface Bundle-Ether1.100
+   interface GigabitEthernet0/0/0/5.100
    evi 100
 !
 ! FAT / entropy — enable per EVPN service policy where required

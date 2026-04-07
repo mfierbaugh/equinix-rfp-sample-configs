@@ -14,9 +14,13 @@ Third-party **MSA-compliant** optics are supported when validated; **DOM** diagn
 ## Sample IOS XR configuration
 
 ```text
-! No universal config — verify transceiver in inventory
-! Example: show controllers optics …
-transceiver permit pid all
+! Third-party optics are supported by default on Cisco 8000 when MSA-compliant.
+! No 'transceiver permit pid all' command exists on IOS XR for Cisco 8000.
+! Verify optic status with:
+!   show controllers optics <interface>
+!   show inventory
+! Breakout configuration (where supported):
+hw-module port-range 24 31 location 0/0/CPU0 mode 4x100
 !
 ```
 

@@ -14,18 +14,20 @@
 ## Sample IOS XR configuration
 
 ```text
+! EPL: L2VPN cross-connect with LDP pseudowire
 l2vpn
  xconnect group EPL1
   p2p EPL-P2P
-   interface GigabitEthernet0/0/0/2
-   neighbor ipv4 198.51.100.3 pw-id 2002
+   interface GigabitEthernet0/0/0/6
+   neighbor ipv4 198.51.100.3 pw-id 2006
 !
-! L2CP tunneling / transparency — typically under l2protocol forward … on the AC interface
-interface GigabitEthernet0/0/0/2
- l2transport
-  l2protocol cdp forward
-  l2protocol stp forward
-!
+! L2CP tunneling — on IOS XR Cisco 8000, l2transport and l2protocol are
+! configured on subinterfaces (not physical ports). For port-based EPL,
+! use the physical interface directly in the xconnect as shown above.
+! For VLAN-based service with L2CP transparency, use a subinterface:
+!   interface GigabitEthernet0/0/0/2.100 l2transport
+!    encapsulation dot1q 100
+!   !
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

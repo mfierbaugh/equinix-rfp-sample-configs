@@ -14,20 +14,23 @@
 ## Sample IOS XR configuration
 
 ```text
-! E-Access EPL: port AC + EVPN VPWS + BGP EVPN
+! E-Access EPL: prerequisite route-policy
+route-policy PASS
+  pass
+end-policy
+!
+! E-Access EPL: port-based AC (l2transport subinterface) + EVPN VPWS + BGP EVPN
 evpn
  evi 3010
 !
-interface GigabitEthernet0/0/0/20
- l2transport
-  l2protocol cdp forward
-  l2protocol stp forward
+interface GigabitEthernet0/0/0/20.10 l2transport
+ encapsulation dot1q 10
 !
 l2vpn
  xconnect group ACC-EPL
   p2p ACC-EPL-VPWS
-   interface GigabitEthernet0/0/0/20
-   neighbor evpn evi 3010 target 198.51.100.10 source 192.0.2.1
+   interface GigabitEthernet0/0/0/20.10
+   neighbor evpn evi 3010 service 10
 !
 router bgp 65001
  bgp router-id 192.0.2.1

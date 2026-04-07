@@ -14,6 +14,11 @@
 ## Sample IOS XR configuration
 
 ```text
+! EVPL: prerequisite route-policy
+route-policy PASS
+  pass
+end-policy
+!
 ! EVPL (EVPN VPWS): subinterface AC + BGP EVPN control plane
 evpn
  evi 1001
@@ -25,7 +30,7 @@ l2vpn
  xconnect group XG-EVPL
   p2p VPWS-1001
    interface GigabitEthernet0/0/0/1.100
-   neighbor evpn evi 1001 target 198.51.100.2 source 192.0.2.1
+   neighbor evpn evi 1001 service 10
 !
 router bgp 65001
  bgp router-id 192.0.2.1

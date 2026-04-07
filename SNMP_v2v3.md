@@ -15,9 +15,9 @@
 
 ```text
 snmp-server vrf MGMT
-snmp-server community READONLY RO IPv4 ACL-SNMP
-snmp-server user MONITOR v3 auth sha <auth> priv aes 128 <priv>
-snmp-server host 198.51.100.50 vrf MGMT version 3 priv MONITOR
+snmp-server community READONLY RO
+snmp-server user MONITOR READONLY v3 auth sha clear AUTHPASS1 priv aes 128 clear PRIVPASS1
+snmp-server host 198.51.100.50 traps version 3 priv MONITOR
 !
 ```
 

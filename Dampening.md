@@ -17,9 +17,11 @@
 interface GigabitEthernet0/0/0/3
  dampening
 !
+! BGP dampening uses 'bgp dampening' under the address-family
+! (parametric form 'dampening <half-life> ...' is not supported on Cisco 8000)
 router bgp 65001
  address-family ipv4 unicast
-  dampening 15 750 2000 60
+  bgp dampening
 !
 ```
 

@@ -14,9 +14,11 @@
 ## Sample IOS XR configuration
 
 ```text
-monitor-session SPAN1
+monitor-session SPAN1 ethernet
  destination interface GigabitEthernet0/0/0/48
- source interface GigabitEthernet0/0/0/0 rx
+!
+interface GigabitEthernet0/0/0/0
+ monitor-session SPAN1 ethernet direction rx-only
 !
 ```
 

@@ -14,15 +14,22 @@
 ## Sample IOS XR configuration
 
 ```text
-! EVPLAN: EVI + bridge-domain + full BGP EVPN AF (control plane)
+! EVPLAN: prerequisite route-policy
+route-policy PASS
+  pass
+end-policy
+!
+! EVPLAN: EVI + l2transport subif + bridge-domain + full BGP EVPN AF (control plane)
 evpn
  evi 500
   advertise-mac
 !
+interface Bundle-Ether10.500 l2transport
+ encapsulation dot1q 500
+!
 l2vpn
  bridge group BG-ELAN
   bridge-domain BD-500
-   vpn-id 500
    interface Bundle-Ether10.500
    evi 500
 !

@@ -14,11 +14,14 @@ Cisco IOS XR **group** / **apply-group** (see [Cisco 8000 configuration guides](
 ## Sample IOS XR configuration
 
 ```text
+! IOS XR group/apply-group: the interface name inside the group acts as a
+! template wildcard — use a regex-style name or a specific interface name.
+! The group is applied globally and inherits to matching interfaces.
 group IF-TEMPLATE
- interface HundredGigE0/0/0/0
+ interface 'HundredGigE.*'
   mtu 9216
  !
-!
+end-group
 apply-group IF-TEMPLATE
 !
 ```
