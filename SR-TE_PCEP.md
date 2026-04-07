@@ -5,27 +5,30 @@
 
 ## Overview
 
-**PCEP** allows a **Path Computation Element** to compute SR policies. Roles include **PCC-initiated** (computed/controlled) paths and integration with **BGP-LS** for topology. A **segment-routing traffic-eng policy** with **dynamic pcep** under **candidate-paths** asks the PCC to obtain the computed path from the PCE (paired with **pcc** peer configuration).
+**PCEP** on the head-end follows *Configure the Head-End Router as PCEP PCC* paired with **segment-routing traffic-eng pcc** peers. A **policy** **candidate-path** using **dynamic pcep** requests the computed SID list from the SR-PCE; see also *on-demand color … dynamic pcep* in the ODN section of *Configure SR-TE Policies*.
+
+**Configuration reference:** Use the Cisco 8000 Series [Segment Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/segment-routing/26xx/configuration/guide/b-segment-routing-cg-cisco8000-26xx.html) as the authoritative source for segment routing syntax, options, and platform behavior on Cisco 8000 (validate against your software release).
 
 ## Sample IOS XR configuration
 
 ```text
+! Cisco 8000 SR guide: PCEP peer + SR-TE PCC; policy uses PCE-computed (dynamic) path
 pce
- peer ipv4 198.51.100.50
+ peer ipv4 192.168.0.50
   password encrypted <secret>
 !
 segment-routing
  traffic-eng
   pcc
-   peer ipv4 198.51.100.50
+   peer ipv4 192.168.0.50
    source-interface Loopback0
   !
   policy MY_PCEP_POLICY
-   color 100 end-point ipv4 10.0.0.9
+   color 100 end-point ipv4 192.168.0.9
    candidate-paths
     preference 100
      dynamic
-      pcep  ! Tells the PCC to request the path from the PCE
+      pcep
   !
  !
 !
