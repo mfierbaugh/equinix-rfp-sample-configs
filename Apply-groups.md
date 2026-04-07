@@ -5,16 +5,18 @@
 
 ## Overview
 
-**apply-group** attaches reusable configuration snippets (including **templates** and **inheritance**) to reduce repetition across interfaces.
+**group** defines a reusable configuration snippet; **apply-group** attaches that group so the same settings apply to multiple targets (IOS XR configuration hierarchy). This is **not** `apply-group-templates` (other NOS).
+
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+Cisco IOS XR **group** / **apply-group** (Configuration Management; see Cisco 8000 IOS XR doc index). Not `apply-group-templates` (non-XR).
 
 ## Sample IOS XR configuration
 
 ```text
-apply-group-templates
- template IF-TEMPLATE
-  interface GigabitEthernet0/0/0/1
-   mtu 9216
-  !
+group IF-TEMPLATE
+ interface HundredGigE0/0/0/0
+  mtu 9216
  !
 !
 apply-group IF-TEMPLATE

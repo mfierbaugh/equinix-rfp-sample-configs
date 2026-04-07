@@ -7,6 +7,10 @@
 
 **ZTP** boots a device with DHCP/TFTP options to retrieve a bootstrap config. Typically combined with **secure bootstrap** and **certificate** onboarding.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-setup-and-upgrade-cisco8k.pdf** (ZTP/bootstrap).
+
 ## Sample IOS XR configuration
 
 ```text

@@ -7,6 +7,10 @@
 
 **QoS** on IOS XR uses **class-maps**, **policy-maps**, **policing**, **queuing**, **WRED**, and **marking**. On **Cisco 8000**, a common pattern is a **three-policy model**: **ingress** (**INGRESS**) classifies and maps to **traffic-class** / **qos-group**; **egress** attaches **EGRESS-Q** (queues, priorities, shaping) and **EGRESS-mark** (e.g. **MPLS experimental** rewrite). Equinix **P1** includes hierarchical QoS; validate **egress shaper** and marking behavior for your ASIC path and release (K100/P100).
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-modular-qos-config-cisco8000.pdf** (class-map, policy-map, service-policy, end-policy-map).
+
 ## Sample IOS XR configuration
 
 ```text

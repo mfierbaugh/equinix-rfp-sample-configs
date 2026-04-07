@@ -5,23 +5,41 @@
 
 ## Overview
 
-**EVPL** is a point-to-point Ethernet Virtual Private Line (E-Line) typically implemented with **EVPN VPWS** (Ethernet VLAN or VLAN-aware) or **MPLS xconnect** on Cisco 8000. Supports VLAN manipulation, multiple TPID values, control-word, and FAT for load balancing. Only the **subinterface** is configured in **l2transport** mode (not the parent physical port).
+**EVPL** is a point-to-point **E-Line** on Cisco 8000 using **EVPN VPWS**: attachment circuits are **l2transport** subinterfaces; the **control plane** is **BGP EVPN** (**address-family l2vpn evpn**) with **EVI**-based signaling (**neighbor evpn evi** … **target** / **source**). Supports VLAN manipulation, multiple TPID values, control-word, and FAT where applicable—validate per release.
+
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-l2vpn-cg-cisco8000-26xx.pdf**; **b-evpn-config-cisco8000.pdf** (EVPN VPWS / xconnect).
 
 ## Sample IOS XR configuration
 
 ```text
-! EVPL: only the subinterface is in l2transport mode (no parent interface l2transport)
+! EVPL (EVPN VPWS): subinterface AC + BGP EVPN control plane
+evpn
+ evi 1001
+!
 interface GigabitEthernet0/0/0/1.100 l2transport
  encapsulation dot1q 100
 !
 l2vpn
- xconnect group XG1
-  p2p P2P1
+ xconnect group XG-EVPL
+  p2p VPWS-1001
    interface GigabitEthernet0/0/0/1.100
-   neighbor ipv4 198.51.100.2 pw-id 1001
-    pw-class EVPN-VPWS-CLASS
+   neighbor evpn evi 1001 target 198.51.100.2 source 192.0.2.1
 !
-! Cross-check pw-class encapsulation (mpls / evpn) per your design
+router bgp 65001
+ bgp router-id 192.0.2.1
+ address-family l2vpn evpn
+  retain route-target all
+ !
+ neighbor 198.51.100.2
+  remote-as 65001
+  update-source Loopback0
+  address-family l2vpn evpn
+   route-policy PASS in
+   route-policy PASS out
+!
+! Align EVI, RD/RT, and pw-class (control-word / encapsulation) with your design
 ```
 
 > **Note:** Examples are illustrative for Cisco IOS XR on Cisco 8000-class systems. Validate syntax, scale limits, and feature availability for your exact release (K100/P100) and interface types.

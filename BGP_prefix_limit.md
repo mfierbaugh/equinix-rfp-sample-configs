@@ -7,6 +7,10 @@
 
 **BGP prefix limits** can be applied per **neighbor** or per **VRF/AF** using **maximum-prefix** with optional **warning-only** or **restart** behavior.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-bgp-config-cisco8000.pdf** (maximum-prefix).
+
 ## Sample IOS XR configuration
 
 ```text

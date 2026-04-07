@@ -7,6 +7,10 @@
 
 **PTP** (IEEE 1588) with **SyncE**, **G.8275.1**, boundary clock, and hardware timestamping is configured under **ptp** / **clock** hierarchies; exact profile depends on network design.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-timing-sync-config-guide-cisco8000.pdf** (PTP/SyncE).
+
 ## Sample IOS XR configuration
 
 ```text

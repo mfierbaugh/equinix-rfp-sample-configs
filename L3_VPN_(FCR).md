@@ -7,6 +7,10 @@
 
 **L3VPN** (VRF-lite/MPLS L3VPN) for FCR use cases: hub-and-spoke, **6VPE**, **BGP multipath** (**maximum-paths** for parallel CE/PE paths where supported), **QPPB** (QoS Policy Propagation via BGP) using a **table-policy** route-policy on the VRF **ipv4 unicast** address family plus **ipv4 bgp policy propagation** on the CE-facing interface, link-local BGP peering, and stitching toward IP WAN as required.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-l3vpn-cg-cisco8000-26xx.pdf**; **b-bgp-config-cisco8000.pdf** (VRF, maximum-paths, table-policy).
+
 ## Sample IOS XR configuration
 
 ```text

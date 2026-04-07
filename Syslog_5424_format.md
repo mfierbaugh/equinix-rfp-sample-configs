@@ -7,6 +7,10 @@
 
 **RFC 5424** syslog uses **`logging format rfc5424`** on IOS XR together with **trap** level, **facility**, remote **logging** hosts (**VRF**, **port**), **source-interface**, and optional **hostnameprefix**. Pair with **ssh server logging** when SSH session logging is required.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-management-cg-8k-26xx.pdf** (logging format rfc5424).
+
 ## Sample IOS XR configuration
 
 ```text

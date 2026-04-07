@@ -7,6 +7,10 @@
 
 **gNMI** (often with **gRPC**) provides subscription-based telemetry and RPC-based configuration on IOS XR. Enable **grpc** and **gnmi** under telemetry.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-telemetry-cg-8000-26xx.pdf**; **b-programmability-configuration-guide-cisco8000.pdf** (gRPC, telemetry).
+
 ## Sample IOS XR configuration
 
 ```text

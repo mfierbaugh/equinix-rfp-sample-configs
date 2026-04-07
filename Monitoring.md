@@ -7,6 +7,10 @@
 
 **Monitoring** covers **TCAM** / **ACL** usage, **platform** and dataplane **resource** visibility, **OAM**, and streaming exports. On **Cisco 8000**, **Model-Driven Telemetry** dial-out can use a **dataplane-monitor** **sensor-group** with **OFA** statistics, **FIB** summaries, and the **Cisco-IOS-XR-8000-platforms-npu-resources-oper** **hw-resources-data** path for **NPU hardware** telemetry—paired with **destination-group** (VRF, gRPC, encoding), **subscription** (**strict-timer**, **sample-interval**, **source-interface**), and CLI (**show platform** / **show controllers**) as needed for your release.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-telemetry-cg-8000-26xx.pdf**; **b-system-monitoring-cg-cisco8k-26xx.pdf**.
+
 ## Sample IOS XR configuration
 
 ```text

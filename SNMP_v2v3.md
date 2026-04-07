@@ -7,6 +7,10 @@
 
 **SNMP** v2c and v3 for monitoring. Use **SNMPv3** auth/priv for security; restrict to management VRF and ACL.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-monitoring-cg-cisco8k-26xx.pdf**; **b-system-security-cg-cisco8000-26xx.pdf** (SNMP).
+
 ## Sample IOS XR configuration
 
 ```text

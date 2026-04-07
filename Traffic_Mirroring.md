@@ -7,6 +7,10 @@
 
 **SPAN / ERSPAN** mirrors traffic to a local or remote analyzer. On IOS XR use **monitor-session** (feature availability varies by platform/NPU).
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-traffic-mirroring-configuration-guide-cisco8k.pdf** (monitor-session).
+
 ## Sample IOS XR configuration
 
 ```text

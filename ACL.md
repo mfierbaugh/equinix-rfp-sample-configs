@@ -7,6 +7,10 @@
 
 **Access lists** on Cisco 8000 support **L2 (MAC)**, **IPv4/IPv6**, and **L4** matches for interface ingress/egress and for control-plane attachment via **IPv4/IPv6 access-list** and **object-group** where supported.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-security-cg-cisco8000-26xx.pdf**; **b-interfaces-config-guide-cisco8k-r26xx.pdf** (IPv4 access-group).
+
 ## Sample IOS XR configuration
 
 ```text

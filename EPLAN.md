@@ -7,6 +7,10 @@
 
 **EPLAN** provides multipoint L2 connectivity with EVPN E-LAN semantics; similar to EVPLAN with emphasis on L2CP handling and broadcast/multicast behavior within the bridge domain.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-evpn-config-cisco8000.pdf** (EVPN E-LAN).
+
 ## Sample IOS XR configuration
 
 ```text

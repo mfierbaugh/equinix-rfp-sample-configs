@@ -9,6 +9,10 @@
 
 **Configuration reference:** Use the Cisco 8000 Series [Segment Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/segment-routing/26xx/configuration/guide/b-segment-routing-cg-cisco8000-26xx.html) as the authoritative source for segment routing syntax, options, and platform behavior on Cisco 8000 (validate against your software release).
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-segment-routing-cg-cisco8000-26xx.pdf**; **b-routing-cg-cisco8000-26xx.pdf** (IS-IS).
+
 ## Sample IOS XR configuration
 
 ```text

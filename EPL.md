@@ -7,6 +7,10 @@
 
 **EPL** is a transparent Ethernet private line (often port-based or simple VLAN). On IOS XR this is commonly modeled with **L2VPN cross-connect** or **EVPN VPWS** with **L2CP transparency** and optional **link-loss forwarding** (LLF) on the attachment circuit.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-l2vpn-cg-cisco8000-26xx.pdf** (L2VPN cross-connect).
+
 ## Sample IOS XR configuration
 
 ```text

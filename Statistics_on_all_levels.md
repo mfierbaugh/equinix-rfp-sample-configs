@@ -7,6 +7,10 @@
 
 **Interface**, **QoS**, **routing**, and **telemetry** statistics are available via **CLI**, **SNMP**, **Model-Driven Telemetry (MDT)**, and **gNMI**. On **Cisco 8000**, production MDT often uses a **destination-group** (gRPC dial-out to a collector), multiple **sensor-group** definitions, and **subscription** stanzas with **strict-timer**, **sample-interval**, **source-interface**, and **destination-id**. The **dataplane-monitor** group below includes the **Cisco-IOS-XR-8000-platforms-npu-resources-oper** **hw-resources-data** sensor path for **NPU hardware resource** telemetry alongside **OFA** and **FIB** summaries. Full deployments typically add further sensor groups (BFD, L2VPN, optics, BGP, interfaces, etc.); **gRPC** dial-in and **SNMP** remain available for other access patterns.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-telemetry-cg-8000-26xx.pdf** (model-driven telemetry).
+
 ## Sample IOS XR configuration
 
 ```text

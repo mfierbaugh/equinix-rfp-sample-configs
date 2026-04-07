@@ -7,6 +7,10 @@
 
 **CoPP** protects the route processor using **LPTS** templates and **control-plane** **policing**. Predefined classes cover BGP, ICMP, SNMP, etc.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-security-cg-cisco8000-26xx.pdf** (control-plane protection).
+
 ## Sample IOS XR configuration
 
 ```text

@@ -7,6 +7,10 @@
 
 **DHCP relay** with **VRF** awareness and **loopback** source is common for bare-metal provisioning in tenant VRFs.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-ip-addresses-cg-8k-26xx.pdf** / DHCP relay topics (IOS XR 26.x).
+
 ## Sample IOS XR configuration
 
 ```text

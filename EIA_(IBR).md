@@ -7,6 +7,10 @@
 
 **EIA (IBR)** features include **RTBH** (blackhole communities), **AS path prepending**, selective route advertisement, and **static routes** at global or VRF scope.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-routing-cg-cisco8000-26xx.pdf** (route-policy; static routes in VRF).
+
 ## Sample IOS XR configuration
 
 ```text

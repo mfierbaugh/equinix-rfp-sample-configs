@@ -7,6 +7,10 @@
 
 **RIB/FIB filtering** limits which routes are installed (e.g., **maximum routes**, **route-policy** on BGP import, or **prefix filtering**). The example attaches **RIB-FILTER** to a **BGP neighbor** inbound (`route-policy … in`) so received prefixes are filtered before RIB install.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-bgp-config-cisco8000.pdf**; **b-routing-cg-cisco8000-26xx.pdf** (route-policy, prefix-set).
+
 ## Sample IOS XR configuration
 
 ```text

@@ -7,6 +7,10 @@
 
 Third-party **MSA-compliant** optics are supported when validated; **DOM** diagnostics are read via **show controllers** / **optics** CLIs. Some platforms allow **breakout** speed selection per port.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-interfaces-config-guide-cisco8k-r26xx.pdf** (transceiver); platform hardware docs.
+
 ## Sample IOS XR configuration
 
 ```text

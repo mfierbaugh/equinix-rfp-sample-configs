@@ -7,6 +7,10 @@
 
 **uRPF** validates source addresses against the FIB. **Loose** mode is typical on internet edges; **strict** may require symmetric routing—confirm roadmap vs release for your ASIC path.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-interfaces-config-guide-cisco8k-r26xx.pdf** (unicast source reachable-via).
+
 ## Sample IOS XR configuration
 
 ```text

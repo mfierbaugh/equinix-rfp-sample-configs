@@ -7,6 +7,10 @@
 
 **NETCONF** and **YANG** models on IOS XR enable structured configuration and RPCs. Enable **netconf-yang** and restrict access via **SSH** and **VRF** management.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-programmability-configuration-guide-cisco8000.pdf** (netconf-yang agent).
+
 ## Sample IOS XR configuration
 
 ```text

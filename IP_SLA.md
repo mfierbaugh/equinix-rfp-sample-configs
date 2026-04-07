@@ -7,6 +7,10 @@
 
 **IP SLA** probes (e.g., **ICMP echo**) measure latency/jitter toward targets; results can trigger **track objects** or **policy** actions.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-ip-addresses-cg-8k-26xx.pdf** / IP SLA feature guide topics in Cisco 8000 26.x doc set.
+
 ## Sample IOS XR configuration
 
 ```text

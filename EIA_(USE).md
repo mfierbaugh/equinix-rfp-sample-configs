@@ -7,6 +7,10 @@
 
 **EIA (USE)** covers routing policy for anycast, BGP FlowSpec, communities, local-preference, and related edge features. **VRRP** and some **6PE** corner cases may differ by platform—verify your specific topology in the compliance matrix.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-bgp-config-cisco8000.pdf**; **b-routing-cg-cisco8000-26xx.pdf** (route-policy).
+
 ## Sample IOS XR configuration
 
 ```text

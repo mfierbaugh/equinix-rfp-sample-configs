@@ -7,6 +7,10 @@
 
 **TACACS+** provides centralized authentication, authorization, and accounting. Configure **multiple methods** with **fallback** to local users as needed.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-security-cg-cisco8000-26xx.pdf** (AAA, TACACS+ server group).
+
 ## Sample IOS XR configuration
 
 ```text

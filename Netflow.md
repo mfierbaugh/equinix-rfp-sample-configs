@@ -7,6 +7,10 @@
 
 **NetFlow / IPFIX** exports flow records to a collector. Configure **flow monitors**, **exporters**, and apply to **interfaces**.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-netflow-configuration-ios-xr-8000.pdf**.
+
 ## Sample IOS XR configuration
 
 ```text

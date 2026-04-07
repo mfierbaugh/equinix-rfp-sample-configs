@@ -7,6 +7,10 @@
 
 **ECMP hashing** uses L3/L4 headers (5-tuple) and extended fields (7-tuple concepts) for load balancing. **Entropy labels** and **UCMP** may interact with hashing—tune **CEF load-sharing** fields per service.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-routing-cg-cisco8000-26xx.pdf** (CEF load-sharing); **b-mpls-cg-cisco8000-26xx.pdf** (entropy).
+
 ## Sample IOS XR configuration
 
 ```text

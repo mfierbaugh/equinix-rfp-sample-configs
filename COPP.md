@@ -7,6 +7,10 @@
 
 **Control Plane Protection** includes **CoPP**, **control-plane ACL**, **rate limits**, and **LPTS** flow classification for protocol traffic to the RP/CPU.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-system-security-cg-cisco8000-26xx.pdf**; **b-routing-cg-cisco8000-26xx.pdf** (LPTS hardware police).
+
 ## Sample IOS XR configuration
 
 ```text

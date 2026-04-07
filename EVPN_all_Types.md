@@ -7,6 +7,10 @@
 
 This covers **BGP EVPN** services on Cisco IOS XR for Ethernet VPN Instance (EVI) with route types 1–4 (inclusive of inclusive multicast Ethernet tag, MAC/IP advertisement, inclusive multicast Ethernet tag for multicast, and Ethernet segment routes as applicable). **Flow-Aware Transport (FAT)** entropy labels can be advertised with EVPN prefixes where supported to improve ECMP hashing for multipath L2/L3 EVPN traffic.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-evpn-config-cisco8000.pdf** (BGP EVPN, bridge-domain, EVI); **b-bgp-config-cisco8000.pdf** (MP-BGP EVPN AF).
+
 ## Sample IOS XR configuration
 
 ```text

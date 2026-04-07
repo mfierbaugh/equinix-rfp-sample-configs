@@ -7,6 +7,10 @@
 
 **IS-IS overload bit** signals that the router should not be used for transit (useful during maintenance). Set **overload** or **on-startup** timers.
 
+## Configuration source (Cisco 8000, IOS XR 26.x)
+
+**b-routing-cg-cisco8000-26xx.pdf** (IS-IS overload).
+
 ## Sample IOS XR configuration
 
 ```text
