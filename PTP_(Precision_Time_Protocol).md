@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-timing-sync-config-guide-cisco8000.pdf** (PTP/SyncE).
+[Timing and Synchronization Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/timing/b-timing-sync-config-guide-cisco8000.html) (PTP/SyncE).
 
 ## Sample IOS XR configuration
 

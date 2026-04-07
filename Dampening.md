@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-bgp-config-cisco8000.pdf** (BGP dampening); **b-interfaces-config-guide-cisco8k-r26xx.pdf** (interface dampening).
+[BGP Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/bgp/b-bgp-config-cisco8000.html) (BGP dampening); [Interface and Hardware Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/26xx/configuration/guide/b-interfaces-config-guide-cisco8k-r26xx.html) (interface dampening).
 
 ## Sample IOS XR configuration
 

@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-programmability-configuration-guide-cisco8000.pdf** (netconf-yang agent).
+[Programmability Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/programmability/b-programmability-configuration-guide-cisco8000.html) (netconf-yang agent).
 
 ## Sample IOS XR configuration
 

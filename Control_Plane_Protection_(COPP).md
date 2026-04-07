@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-system-security-cg-cisco8000-26xx.pdf** (control-plane protection).
+[System Security Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/security/26xx/configuration/guide/b-system-security-cg-cisco8000-26xx.html) (control-plane protection).
 
 ## Sample IOS XR configuration
 

@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-l2vpn-cg-cisco8000-26xx.pdf**; **b-interfaces-config-guide-cisco8k-r26xx.pdf** (dot1q l2transport).
+[L2VPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/l2vpn/26xx/configuration/guide/b-l2vpn-cg-cisco8000-26xx.html); [Interface and Hardware Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/26xx/configuration/guide/b-interfaces-config-guide-cisco8k-r26xx.html) (dot1q l2transport).
 
 ## Sample IOS XR configuration
 

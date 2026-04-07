@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-setup-and-upgrade-cisco8k.pdf** (ZTP/bootstrap).
+[Cisco IOS XR Setup and Upgrade Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/b-setup-and-upgrade-cisco8k.html) (ZTP/bootstrap).
 
 ## Sample IOS XR configuration
 

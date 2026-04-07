@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-bgp-config-cisco8000.pdf** (maximum-prefix).
+[BGP Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/bgp/b-bgp-config-cisco8000.html) (maximum-prefix).
 
 ## Sample IOS XR configuration
 

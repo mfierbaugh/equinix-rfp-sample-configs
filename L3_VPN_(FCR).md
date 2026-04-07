@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-l3vpn-cg-cisco8000-26xx.pdf**; **b-bgp-config-cisco8000.pdf** (VRF, maximum-paths, table-policy).
+[L3VPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/l3vpn/26xx/configuration/guide/b-l3vpn-cg-cisco8000-26xx.html); [BGP Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/bgp/b-bgp-config-cisco8000.html) (VRF, maximum-paths, table-policy).
 
 ## Sample IOS XR configuration
 

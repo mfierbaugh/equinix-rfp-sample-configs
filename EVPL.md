@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-l2vpn-cg-cisco8000-26xx.pdf**; **b-evpn-config-cisco8000.pdf** (EVPN VPWS / xconnect).
+[L2VPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/l2vpn/26xx/configuration/guide/b-l2vpn-cg-cisco8000-26xx.html); [EVPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/evpn/b-evpn-config-cisco8000.html) (EVPN VPWS / xconnect).
 
 ## Sample IOS XR configuration
 

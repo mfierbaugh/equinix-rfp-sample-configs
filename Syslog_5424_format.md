@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-system-management-cg-8k-26xx.pdf** (logging format rfc5424).
+[Implementing System Logging](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/system-monitoring/26xx/configuration/guide/b-system-monitoring-cg-cisco8k-26xx/implementing-system-logging.html) (`logging format rfc5424`); [System Management Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/system-management/26xx/configuration/guide/b-system-management-cg-8k-26xx.html).
 
 ## Sample IOS XR configuration
 

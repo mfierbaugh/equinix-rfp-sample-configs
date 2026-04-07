@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-ip-addresses-cg-8k-26xx.pdf** / DHCP relay topics (IOS XR 26.x).
+[IP Addresses and Services Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/ip-addresses/26xx/configuration/guide/b-ip-addresses-cg-8k-26xx.html) (DHCP relay and related topics).
 
 ## Sample IOS XR configuration
 

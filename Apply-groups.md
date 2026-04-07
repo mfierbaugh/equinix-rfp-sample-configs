@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-Cisco IOS XR **group** / **apply-group** (Configuration Management; see Cisco 8000 IOS XR doc index). Not `apply-group-templates` (non-XR).
+Cisco IOS XR **group** / **apply-group** (see [Cisco 8000 configuration guides](https://www.cisco.com/c/en/us/support/routers/8000-series-routers/products-installation-and-configuration-guides-list.html) for the Configuration Management chapter in your release). Not `apply-group-templates` (non-XR).
 
 ## Sample IOS XR configuration
 

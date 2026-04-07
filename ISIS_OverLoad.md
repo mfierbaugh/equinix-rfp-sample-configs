@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-routing-cg-cisco8000-26xx.pdf** (*Customize Routes for IS-IS*: `set-overload-bit`; *Example: Configuring IS-IS To Handle Router Overload*: `max-metric`; OOR: `oor-set-overload-bit disable`).
+[Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/routing/26xx/configuration/guide/b-routing-cg-cisco8000-26xx.html) (*Customize Routes for IS-IS*: `set-overload-bit`; *Example: Configuring IS-IS To Handle Router Overload*: `max-metric`; OOR: `oor-set-overload-bit disable`).
 
 ## Sample IOS XR configuration
 

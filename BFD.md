@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-bgp-config-cisco8000.pdf** (BFD under BGP neighbor); **b-routing-cg-cisco8000-26xx.pdf** (IS-IS BFD); **b-interfaces-config-guide-cisco8k-r26xx.pdf** (BFD on Bundle-Ether and interfaces).
+[BGP Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/bgp/b-bgp-config-cisco8000.html) (BFD under BGP neighbor); [Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/routing/26xx/configuration/guide/b-routing-cg-cisco8000-26xx.html) (IS-IS BFD); [Interface and Hardware Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/26xx/configuration/guide/b-interfaces-config-guide-cisco8k-r26xx.html) (BFD on Bundle-Ether and interfaces).
 
 ## Sample IOS XR configuration
 

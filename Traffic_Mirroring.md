@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-traffic-mirroring-configuration-guide-cisco8k.pdf** (monitor-session).
+[Traffic Mirroring Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/traffic-mirroring/b-traffic-mirroring-configuration-guide-cisco8k.html) (monitor-session).
 
 ## Sample IOS XR configuration
 

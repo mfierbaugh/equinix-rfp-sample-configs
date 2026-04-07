@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-netflow-configuration-ios-xr-8000.pdf**.
+[NetFlow and sFlow Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/netflow/configuration/b-netflow-configuration-ios-xr-8000.html).
 
 ## Sample IOS XR configuration
 

@@ -9,7 +9,7 @@ This covers **BGP EVPN** services on Cisco IOS XR for Ethernet VPN Instance (EVI
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-evpn-config-cisco8000.pdf** (BGP EVPN, bridge-domain, EVI); **b-bgp-config-cisco8000.pdf** (MP-BGP EVPN AF).
+[EVPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/evpn/b-evpn-config-cisco8000.html) (BGP EVPN, bridge-domain, EVI); [BGP Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/bgp/b-bgp-config-cisco8000.html) (MP-BGP EVPN AF).
 
 ## Sample IOS XR configuration
 

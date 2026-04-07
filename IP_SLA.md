@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-ip-addresses-cg-8k-26xx.pdf** / IP SLA feature guide topics in Cisco 8000 26.x doc set.
+[Implementing IP Service Level Agreements](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/system-monitoring/26xx/configuration/guide/b-system-monitoring-cg-cisco8k-26xx/implementing-ip-service-level-agreements.html) (see also [IP Addresses and Services](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/ip-addresses/26xx/configuration/guide/b-ip-addresses-cg-8k-26xx.html) for related topics).
 
 ## Sample IOS XR configuration
 

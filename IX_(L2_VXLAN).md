@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-evpn-config-cisco8000.pdf** (MP-BGP EVPN, EVI, bridge-domain); **b-l2vpn-cg-cisco8000-26xx.pdf** (L2VPN); **b-segment-routing-cg-cisco8000-26xx.pdf** (SR-MPLS underlay).
+[EVPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/evpn/b-evpn-config-cisco8000.html) (MP-BGP EVPN, EVI, bridge-domain); [L2VPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/l2vpn/26xx/configuration/guide/b-l2vpn-cg-cisco8000-26xx.html) (L2VPN); [Segment Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/segment-routing/26xx/configuration/guide/b-segment-routing-cg-cisco8000-26xx.html) (SR-MPLS underlay).
 
 ## Sample IOS XR configuration
 

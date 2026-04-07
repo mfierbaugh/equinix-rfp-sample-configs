@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-routing-cg-cisco8000-26xx.pdf** (route-policy; static routes in VRF).
+[Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/routing/26xx/configuration/guide/b-routing-cg-cisco8000-26xx.html) (route-policy; static routes in VRF).
 
 ## Sample IOS XR configuration
 

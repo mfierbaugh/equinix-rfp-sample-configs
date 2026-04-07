@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-telemetry-cg-8000-26xx.pdf**; **b-programmability-configuration-guide-cisco8000.pdf** (gRPC, telemetry).
+[Telemetry Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/telemetry/26xx/configuration/guide/b-telemetry-cg-8000-26xx.html); [Programmability Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/programmability/b-programmability-configuration-guide-cisco8000.html) (gRPC, telemetry).
 
 ## Sample IOS XR configuration
 

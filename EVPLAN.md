@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-evpn-config-cisco8000.pdf** (EVPN E-LAN, bridge-domain).
+[EVPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/evpn/b-evpn-config-cisco8000.html) (EVPN E-LAN, bridge-domain).
 
 ## Sample IOS XR configuration
 

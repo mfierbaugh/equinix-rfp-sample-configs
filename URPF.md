@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-interfaces-config-guide-cisco8k-r26xx.pdf** (unicast source reachable-via).
+[Interface and Hardware Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/Interfaces/26xx/configuration/guide/b-interfaces-config-guide-cisco8k-r26xx.html) (unicast source reachable-via).
 
 ## Sample IOS XR configuration
 

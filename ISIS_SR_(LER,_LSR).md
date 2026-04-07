@@ -11,7 +11,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-segment-routing-cg-cisco8000-26xx.pdf**; **b-routing-cg-cisco8000-26xx.pdf** (IS-IS).
+[Segment Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/segment-routing/26xx/configuration/guide/b-segment-routing-cg-cisco8000-26xx.html); [Routing Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/routing/26xx/configuration/guide/b-routing-cg-cisco8000-26xx.html) (IS-IS).
 
 ## Sample IOS XR configuration
 

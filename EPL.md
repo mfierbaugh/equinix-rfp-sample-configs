@@ -9,7 +9,7 @@
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-l2vpn-cg-cisco8000-26xx.pdf** (L2VPN cross-connect).
+[L2VPN Configuration Guide](https://www.cisco.com/c/en/us/td/docs/iosxr/cisco8000/l2vpn/26xx/configuration/guide/b-l2vpn-cg-cisco8000-26xx.html) (L2VPN cross-connect).
 
 ## Sample IOS XR configuration
 
