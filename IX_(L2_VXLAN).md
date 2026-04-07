@@ -5,16 +5,17 @@
 
 ## Overview
 
-**IX** L2 handoff uses the same IOS XR **EVPN/MPLS** and **l2vpn** patterns as elsewhere—avoid non–IOS XR `interface nve` / `member vni` syntax. Pair **MP-BGP EVPN** with **bridge-domain** / **EVI**; use **NVE overlay-encapsulation** under physical interfaces when the documented dataplane is UDP/GUE overlay.
+**Cisco 8000** does **not** support **VXLAN** (including **EVPN-VXLAN**) as a dataplane today. For an **IX L2** service, use **EVPN over MPLS** with an **SR-MPLS** (or MPLS) **underlay**: **MP-BGP EVPN** (**address-family l2vpn evpn**), **EVI**, and **bridge-domain** / attachment circuits— the same E-LAN **EVPN/MPLS** patterns as elsewhere on IOS XR. Do not use **NVE** / **VNI** models from other NOS.
 
 ## Configuration source (Cisco 8000, IOS XR 26.x)
 
-**b-evpn-config-cisco8000.pdf**; **b-interfaces-config-guide-cisco8k-r26xx.pdf** (overlay/NVE).
+**b-evpn-config-cisco8000.pdf** (MP-BGP EVPN, EVI, bridge-domain); **b-l2vpn-cg-cisco8000-26xx.pdf** (L2VPN); **b-segment-routing-cg-cisco8000-26xx.pdf** (SR-MPLS underlay).
 
 ## Sample IOS XR configuration
 
 ```text
-! EVPN/MPLS E-LAN style (EVPN Configuration Guide); adjust EVI/BD to your IX design
+! EVPN E-LAN over MPLS (SR-MPLS underlay per Segment Routing / MPLS guides); adjust EVI/BD to your IX design
+! Core MPLS/SR, label stack, and BGP EVPN neighbors — configure per your topology
 evpn
  evi 4090
   advertise-mac
@@ -28,10 +29,6 @@ l2vpn
 router bgp 65001
  address-family l2vpn evpn
   retain route-target all
-!
-! Optional overlay on core-facing interface (Interface Guide — NVE / GUE)
-! interface HundredGigE0/0/0/1
-!  nve overlay-encapsulation guev1
 !
 ```
 
